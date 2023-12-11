@@ -322,6 +322,35 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
       <!-- Template Main JS File -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Smooth scroll function
+    function scrollToElement(elementId) {
+      document.getElementById(elementId).scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+
+    // Event listeners for navigation links
+    document.querySelector('a[href="/index.html"]').addEventListener("click", function (e) {
+      e.preventDefault();
+      scrollToElement("home");
+    });
+
+    document.querySelector('a[href="/#about"]').addEventListener("click", function (e) {
+      e.preventDefault();
+      scrollToElement("about");
+    });
+
+    document.querySelector('a[href="/#contact"]').addEventListener("click", function (e) {
+      e.preventDefault();
+      scrollToElement("contact");
+    });
+
+    // Add similar listeners for other navigation links if needed
+  });
+</script>
+
       <script src="js/main.js"></script>
 
 </body>
